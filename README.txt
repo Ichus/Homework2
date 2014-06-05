@@ -10,4 +10,4 @@ To Use
 ------
 To run the user guessing game input 'ruby game.rb' into the command line
 
-To run the computer guessing game input 'ruby BinaryAlgGame.rb' into the command line
+To run the computer guessing game input 'ruby binary_alg_game.rb' into the command line
