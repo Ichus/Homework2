@@ -5,7 +5,6 @@ class UserGuessingGame
   def initialize
     random_number = Random.new
     @number = random_number.rand(1..100)
-    self.guess
   end
 
   # Allows the user to guess. If the guess is correct a message is posted.
@@ -18,7 +17,7 @@ class UserGuessingGame
     if guess == @number
       puts 'WOW!! You guessed it on the first try!'
     else
-      self.keep_guessing guess
+      keep_guessing guess
     end
   end
 
@@ -37,7 +36,7 @@ class UserGuessingGame
       count += 1
     end
 
-    self.results guess
+    results guess
   end
 
   # Prints the result of the game to the screen.
@@ -45,11 +44,11 @@ class UserGuessingGame
     if guess == @number
       puts 'Congratulations you guessed the right number!'
     else
-      puts 'You ran out of guesses.'
+      puts "Correct answer was #{@number}. You ran out of guesses."
     end
   end
 end
 
 # Create instance of UserGuessingGame to begin the game
 try_to_guess = UserGuessingGame.new
-try_to_guess
+try_to_guess.guess
